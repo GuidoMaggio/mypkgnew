@@ -1,10 +1,10 @@
 
 # mypkgnew
 
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/GuidoMaggio/mypkgnew/actions/workflows/workflow.yml/badge.svg)](https://github.com/GuidoMaggio/mypkgnew/actions/)
-<!-- badges: end -->
-
+ <!-- badges: start -->
+  [![workflow](https://github.com/GuidoMaggio/mypkgnew/actions/workflows/workflow.yml/badge.svg)](https://github.com/GuidoMaggio/mypkgnew/actions/workflows/workflow.yml)
+  <!-- badges: end -->
+  
 The goal of mypkgnew is to ...
 
 ## Installation
