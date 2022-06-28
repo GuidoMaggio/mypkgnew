@@ -18,7 +18,7 @@
 #' @seealso [utils::read.csv()]
 read_data <- function(filename, path, sep = ",") {
   filepath <- file.path(path, filename)
-  data.out <- read.csv(system.file(filepath, package = "mypkg"), sep = sep)
+  data.out <- read.csv(system.file(filepath, package = "mypkgnew"), sep = sep)
   # DQ check on column names
   if (!(all(
     c(
