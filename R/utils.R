@@ -1,5 +1,5 @@
 
-#' @title read covid data
+#' @title read covid data from csv file
 #' Function to read covid data from case_time_series.csv
 #'
 #' @param filename \code{character}, file name.
