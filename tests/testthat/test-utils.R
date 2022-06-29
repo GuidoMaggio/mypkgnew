@@ -34,15 +34,31 @@ test_that("process_data works", {
 test_that("plot works", {
   pp <- line_plot_data(data, "Daily.Active")
 
-  expect_equal(class(pp), c("gg","ggplot"),
+  expect_equal(class(pp), c("plotly", "htmlwidget"),
                label = "wrong plot class")
-  expect_equal(pp$data, data, label =
+  expect_equal(pp$x$data[[1]]$y, data[["Daily.Active"]], label =
                  "data are different from input")
 
   pp <- bar_plot_data(data, "Daily.Active")
 
-  expect_equal(class(pp), c("gg","ggplot"),
+  expect_equal(class(pp), c("plotly", "htmlwidget"),
                label = "wrong plot class")
-  expect_equal(pp$data, data,
-               label = "data are different from input")
+  # expect_equal(pp$x$data[[1]]$base, data[["Daily.Active"]],
+  #              label = "data are different from input")
+})
+
+vect_dates <- as.Date(seq(1, 100, by = 5), origin = as.Date("2022/01/01"))
+
+test_that("get_date_breaks works", {
+  # example 1
+  expect_equal(get_date_breaks(vect_dates, 10), "1 month")
+  # dummy with all equal values
+  expect_equal(get_date_breaks(vect_dates, 100), "1 week")
+})
+test_that("character input gives error to get_date_breaks", {
+  # example 3
+  expect_error(get_date_breaks(vect_dates, "100"))
+  # this test gives an error,
+  # the function can make the difference with character "100" due to the operation on Dates
+  # get_date_breaks must be updated with a stop message in order to make this test pass
 })

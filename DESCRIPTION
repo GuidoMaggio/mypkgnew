@@ -1,6 +1,6 @@
 Package: mypkgnew
 Title: Covid19 Data analysis
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person("Guido", "Maggio", , "guido.maggio@mirai-solutions.com", role = c("aut", "cre"))
 Description: IntroR4 workshop example package.
@@ -13,6 +13,7 @@ RoxygenNote: 7.2.0
 Imports: 
     dplyr,
     ggplot2,
+    plotly,
     scales
 Suggests: 
     roxygen2,
